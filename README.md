@@ -1,5 +1,7 @@
 # pagosacontainerhome.com
 
+Live at https://pagosacontainerhome.com
+
 One-page site for a two-bedroom container home short-term rental west of Pagosa Springs, Colorado. Archuleta County vacation rental permit VRP-26-0400.
 
 The whole site is one Cloudflare Worker (`worker.js`) serving one inline HTML page. No build step, no framework, no dependencies.
