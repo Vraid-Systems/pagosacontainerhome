@@ -1,0 +1,22 @@
+// Cloudflare Worker config for pagosacontainerhome.com.
+// Workers Builds runs `npx wrangler deploy` on every push to main.
+{
+  "name": "pagosacontainerhome",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-13",
+
+  // Keep the workers.dev URL as a fallback; no per-branch preview URLs.
+  "workers_dev": true,
+  "preview_urls": false,
+
+  // Both hostnames are Custom Domains on the pagosacontainerhome.com zone.
+  // The Worker itself 301s www to the bare domain.
+  "routes": [
+    { "pattern": "pagosacontainerhome.com", "custom_domain": true },
+    { "pattern": "www.pagosacontainerhome.com", "custom_domain": true }
+  ],
+
+  "observability": {
+    "enabled": true
+  }
+}
