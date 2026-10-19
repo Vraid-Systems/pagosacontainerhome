@@ -19,7 +19,10 @@
   // Photos and other static files in public/ are served directly by Cloudflare.
   // Anything that is not a file falls through to worker.js.
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "binding": "ASSETS",
+    // Video goes through worker.js so it can answer Range requests (needed by iPhones).
+    "run_worker_first": ["/video/*"]
   },
 
   "observability": {

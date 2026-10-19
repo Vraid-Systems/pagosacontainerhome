@@ -31,7 +31,7 @@ Preview locally with `npx wrangler dev`.
 - `www.pagosacontainerhome.com` 301s to the bare domain.
 - Any other path 302s to `/`.
 - Both hostnames are Custom Domains, declared in `wrangler.jsonc`.
-- Real files in `public/` are served directly and never hit the Worker.
+- Real files in `public/` are served directly and never hit the Worker, except `/video/*`: static assets ignore HTTP Range requests and iPhone Safari won't play MP4 without them, so `wrangler.jsonc` routes video through `worker.js`, which answers ranges itself.
 
 ## Ground rules for the copy
 
