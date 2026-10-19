@@ -16,6 +16,12 @@
     { "pattern": "www.pagosacontainerhome.com", "custom_domain": true }
   ],
 
+  // Photos and other static files in public/ are served directly by Cloudflare.
+  // Anything that is not a file falls through to worker.js.
+  "assets": {
+    "directory": "./public"
+  },
+
   "observability": {
     "enabled": true
   }
