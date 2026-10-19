@@ -23,7 +23,7 @@ Preview locally with `npx wrangler dev`.
 
 - **Booking link:** change `BOOKING_URL` at the top of `worker.js`. It drives both "Check dates and book" buttons.
 - **Page copy:** lives in the `HTML` string in `worker.js`. It's a JSON-escaped string, so quotes inside it are `\"` and line breaks are `\n`.
-- **Photos:** live in `public/photos/` as WebP at 800px and 1600px, plus `og.jpg` for link previews. Cloudflare serves them straight from the edge, with a one-week browser cache set in `public/_headers`. The gallery markup is the "Take a look" section in `worker.js`. Strip metadata from new photos before adding them, since phone photos carry GPS.
+- **Photos:** live in `public/photos/` as WebP at 800px and 1600px, plus `og.jpg` for link previews. Cloudflare serves them straight from the edge, with a one-week browser cache set in `public/_headers`. The gallery markup is the "Take a look" section in `worker.js`. The walkthrough video lives in `public/video/` (H.264, 8-bit, 30 fps, no audio, under the 25 MiB asset limit) with its poster frame. Strip metadata from new photos before adding them, since phone photos carry GPS.
 
 ## How the Worker behaves
 
