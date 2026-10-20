@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>House Guide | Pagosa Container Home</title>
+<meta name="description" content="Check-in, house manual and check-out for guests at Pagosa Container Home.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://pagosacontainerhome.com/guide">
+<meta property="og:title" content="House Guide | Pagosa Container Home">
+<meta property="og:description" content="Check-in, how the house works, and check-out. Save this page for your stay.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pagosacontainerhome.com/guide">
+<meta property="og:image" content="https://pagosacontainerhome.com/photos/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2C5F7C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='8' width='28' height='16' rx='1' fill='%232C5F7C'/%3E%3Cpath d='M7 10v12M11 10v12M15 10v12M19 10v12M23 10v12M27 10v12' stroke='%23F6F7F4' stroke-opacity='.35'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --container: #2C5F7C;
+    --container-dk: #214A61;
+    --steel: #5F6B72;
+    --pine: #3E5641;
+    --snow: #F6F7F4;
+    --ink: #1C2125;
+    --plate: #E3A33B;
+    --rule: #C9CFD2;
+    --soft: #3A4247;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--snow); color: var(--ink); font: 400 1.0625rem/1.6 "IBM Plex Sans", system-ui, sans-serif; }
+  a { color: var(--container); }
+  a:focus-visible { outline: 3px solid var(--plate); outline-offset: 3px; }
+  .wrap { max-width: 52rem; margin: 0 auto; padding: 0 1rem; }
+  img { display: block; max-width: 100%; height: auto; }
+
+  /* Header: a short container-side band */
+  .top {
+    color: var(--snow);
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 14px, rgba(0,0,0,.10) 14px 18px, rgba(255,255,255,0) 18px 30px, rgba(0,0,0,.18) 30px 34px),
+      linear-gradient(180deg, var(--container) 0%, var(--container-dk) 100%);
+    border-bottom: 10px solid var(--ink);
+  }
+  .top .wrap { padding-top: 1.25rem; padding-bottom: clamp(2rem, 6vw, 3.25rem); }
+  .home { color: var(--snow); opacity: .85; font-size: .95rem; text-decoration: none; }
+  .home:hover { opacity: 1; text-decoration: underline; }
+  .kicker { font: 700 1rem/1.2 "Big Shoulders Stencil Display", sans-serif; letter-spacing: .08em; opacity: .85; margin: 2rem 0 .4rem; }
+  h1 { font: 800 clamp(3rem, 11vw, 6rem)/.88 "Big Shoulders Stencil Display", sans-serif; text-transform: uppercase; margin: 0 0 1rem; }
+  .lede { font-size: clamp(1.05rem, 2.2vw, 1.2rem); max-width: 34rem; margin: 0; }
+
+  /* Jump links */
+  .jump { position: sticky; top: 0; z-index: 5; background: var(--snow); border-bottom: 1px solid var(--rule); }
+  .jump ul { list-style: none; margin: 0 auto; padding: .55rem 1rem; max-width: 52rem; display: flex; gap: .4rem; overflow-x: auto; scrollbar-width: none; }
+  .jump ul::-webkit-scrollbar { display: none; }
+  .jump a { display: block; white-space: nowrap; text-decoration: none; color: var(--ink); font-size: .9rem; font-weight: 500; padding: .35rem .7rem; border: 1px solid var(--rule); border-radius: 999px; background: #fff; }
+  .jump a:hover { border-color: var(--container); color: var(--container); }
+
+  /* Sections */
+  section { padding: clamp(2.25rem, 6vw, 3.5rem) 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 3.25rem; }
+  section:last-of-type { border-bottom: 0; }
+  h2 { font: 800 clamp(2rem, 6vw, 2.9rem)/1 "Big Shoulders Stencil Display", sans-serif; color: var(--container-dk); margin: 0 0 1rem; }
+  h3 { font-size: 1.1rem; font-weight: 600; margin: 1.75rem 0 .4rem; }
+  p { margin: 0 0 1rem; }
+  .measure { max-width: 38rem; }
+  .why { color: var(--soft); font-size: .97rem; }
+
+  /* The one-line rule for each topic, stenciled like a label */
+  .rule {
+    display: flex; gap: .75rem; align-items: flex-start;
+    background: #fff; border: 2px solid var(--ink); border-left-width: 10px; border-radius: 3px;
+    padding: .9rem 1rem; margin: 0 0 1.25rem; max-width: 40rem; font-weight: 600; font-size: 1.08rem; line-height: 1.45;
+  }
+  .rule.amber { border-left-color: var(--plate); }
+  .rule .tag {
+    flex: none; font: 700 .8rem/1 "Big Shoulders Stencil Display", sans-serif; letter-spacing: .08em;
+    background: var(--ink); color: var(--snow); padding: .35rem .45rem .3rem; border-radius: 2px; margin-top: .15rem;
+  }
+
+  figure { margin: 1.25rem 0 1.5rem; }
+  figure img { border-radius: 3px; background: #DDE1E2; }
+  figcaption { font-size: .88rem; color: var(--soft); margin-top: .45rem; }
+  .pair { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 1rem; align-items: start; }
+  .pair figure { margin: 0; }
+
+  ul.list, ol.list { margin: 0 0 1rem; padding-left: 1.25rem; max-width: 38rem; }
+  .list li { margin-bottom: .45rem; }
+
+  /* Check-out checklist, tappable */
+  .checks { list-style: none; padding: 0; margin: 0 0 1.25rem; max-width: 38rem; }
+  .checks li { border-bottom: 1px solid var(--rule); }
+  .checks label { display: flex; gap: .8rem; align-items: flex-start; padding: .8rem .25rem; cursor: pointer; }
+  .checks input { width: 1.35rem; height: 1.35rem; margin: .15rem 0 0; accent-color: var(--container); flex: none; }
+  .checks input:checked + span { color: var(--steel); text-decoration: line-through; text-decoration-color: var(--steel); }
+  .note { font-size: .92rem; color: var(--soft); }
+
+  .modes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; max-width: 40rem; margin: 0 0 1.25rem; }
+  .modes div { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: .8rem .9rem; }
+  .modes b { display: block; font-size: .95rem; margin-bottom: .2rem; }
+  .modes span { font-size: .92rem; color: var(--soft); }
+
+  footer { background: var(--ink); color: #C9CFD2; padding: 2rem 0; font-size: .9rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 2rem; }
+  footer a { color: var(--snow); }
+
+  @media (max-width: 640px) {
+    .pair, .modes { grid-template-columns: 1fr; }
+    figure.narrow img { max-width: 260px; }
+  }
+  @media print {
+    .jump, .noprint { display: none !important; }
+    body { background: #fff; font-size: 11pt; }
+    .top { background: none; color: var(--ink); border-bottom: 3px solid var(--ink); }
+    .home { display: none; }
+    section { padding: 1rem 0; }
+    figure, .rule, .modes div, .checks li, .pair { break-inside: avoid; }
+    h2, h3 { break-after: avoid; }
+    figure img { max-height: 2.2in; width: auto; }
+    .rule .tag { background: none; color: var(--ink); border: 1px solid var(--ink); }
+    .checks input { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    footer { background: none; color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="home" href="/">&larr; pagosacontainerhome.com</a>
+    <p class="kicker">GUEST HOUSE GUIDE</p>
+    <h1>House<br>Guide</h1>
+    <p class="lede">Everything you need from arrival to check-out. The house is simple, but a few things work differently out here. Bookmark this page for your stay.</p>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Sections">
+  <ul>
+    <li><a href="#arrive">Arriving</a></li>
+    <li><a href="#water">Drinking water</a></li>
+    <li><a href="#heat">Heat &amp; AC</a></li>
+    <li><a href="#sink">Kitchen sink</a></li>
+    <li><a href="#trash">Trash</a></li>
+    <li><a href="#leaving">Check-out</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="arrive">
+    <div class="wrap">
+      <h2>Arriving</h2>
+      <ul class="list">
+        <li><b>Self check-in.</b> Your door code comes in your booking messages. It works only during your stay.</li>
+        <li><b>Address.</b> The exact address is in your booking, not on this website.</li>
+        <li><b>Parking.</b> Park on the gravel pad. There is room for up to six vehicles, and trailers are welcome.</li>
+        <li><b>Check-in and check-out times</b> are in your booking confirmation.</li>
+      </ul>
+      <h3>House rules</h3>
+      <ul class="list">
+        <li>No smoking, inside or out.</li>
+        <li>Up to two dogs. No other pets.</li>
+        <li>Guests must be 21 or older to book.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="water">
+    <div class="wrap">
+      <h2>Drinking water</h2>
+      <p class="rule"><span class="tag">RULE</span><span>Drink and cook with water from the small chrome tap at the kitchen sink.</span></p>
+      <figure>
+        <img src="/photos/guide/ro.webp" width="1000" height="692" alt="Kitchen sink with a tall black faucet and, to its right, a small chrome reverse osmosis tap circled in amber">
+        <figcaption>The circled tap is filtered by reverse osmosis.</figcaption>
+      </figure>
+      <p class="measure why">Water from the main faucet is safe, but it tastes foul. The reverse osmosis tap filters it, so use that one for drinking water, coffee and cooking. The main faucet is fine for washing.</p>
+    </div>
+  </section>
+
+  <section id="heat">
+    <div class="wrap">
+      <h2>Heat &amp; AC</h2>
+      <p class="rule"><span class="tag">RULE</span><span>Use the mini-splits to heat and cool the house. Leave the heat bars on 62&deg;F.</span></p>
+
+      <div class="pair">
+        <figure>
+          <img src="/photos/guide/minisplit.webp" width="1000" height="600" alt="White wall-mounted mini-split unit high on a shiplap wall">
+          <figcaption>A mini-split, high on the wall.</figcaption>
+        </figure>
+        <figure class="narrow">
+          <img src="/photos/guide/remote.webp" width="800" height="1000" alt="Mini-split remote control in a wall holder next to a light switch">
+          <figcaption>Its remote lives in a holder on the wall.</figcaption>
+        </figure>
+      </div>
+
+      <h3>Mini-splits: use these</h3>
+      <p class="measure">The mini-splits change the temperature faster and more efficiently than the heat bars. Use the remote to set the mode and temperature.</p>
+      <div class="modes">
+        <div><b>Keep both on the same mode</b><span>Set both mini-splits to heat, or both to cool. They won't run with one on each.</span></div>
+        <div><b>Give them 5 minutes</b><span>After switching between heat and cool, they can take about five minutes to start blowing warm or cool air. That's normal.</span></div>
+      </div>
+
+      <h3>Heat bars: leave on 62&deg;F</h3>
+      <figure>
+        <img src="/photos/guide/heatbar.webp" width="1000" height="417" alt="Long white electric heat bar mounted high on the wall near the ceiling, outlined in amber">
+        <figcaption>The electric heat bar, high on the wall near the ceiling.</figcaption>
+      </figure>
+      <div class="pair">
+        <div>
+          <p class="measure">The long white bars near the ceiling are electric resistance heaters. They're slower to change the temperature than the mini-splits, and they use a lot more power.</p>
+          <p class="measure"><b>Their wall thermostats are set to 62&deg;F.</b> Please leave them there. If you do change one, set it back to 62&deg;F before you leave.</p>
+        </div>
+        <figure class="narrow">
+          <img src="/photos/guide/thermostat.webp" width="700" height="700" alt="Small white digital wall thermostat on shiplap beside the refrigerator">
+          <figcaption>A heat bar thermostat. Leave it on 62&deg;F.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="sink">
+    <div class="wrap">
+      <h2>Kitchen sink</h2>
+      <p class="rule amber"><span class="tag">RULE</span><span>Keep the strainer in the kitchen sink drain. Empty it into the trash, not down the drain.</span></p>
+      <p class="measure why">The house is on a septic system. The strainer catches food scraps that would otherwise clog the septic, make it back up into the house, or make it smell. Grease and oil go in the trash too.</p>
+    </div>
+  </section>
+
+  <section id="trash">
+    <div class="wrap">
+      <h2>Trash</h2>
+      <p class="measure">If the kitchen trash fills up, there's an additional large trash can in the pumphouse.</p>
+    </div>
+  </section>
+
+  <section id="leaving">
+    <div class="wrap">
+      <h2>Check-out</h2>
+      <p class="measure">Check-out time is in your booking. Before you go:</p>
+      <ul class="checks">
+        <li><label><input type="checkbox"><span>Set any heat bar thermostat you changed back to <b>62&deg;F</b>.</span></label></li>
+        <li><label><input type="checkbox"><span>Empty the kitchen sink strainer into the trash, and put it back in the drain.</span></label></li>
+        <li><label><input type="checkbox"><span>If the kitchen trash is full, bag it and put it in the large can in the <b>pumphouse</b>.</span></label></li>
+        <li><label><input type="checkbox"><span>Make sure the front door is locked.</span></label></li>
+      </ul>
+      <p class="note noprint">Tap items to check them off. Nothing is saved or sent.</p>
+      <p class="measure">Thanks for staying. If anything broke or ran out, tell us in your booking messages so we can fix it before the next guest.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Archuleta County Vacation Rental Permit VRP-26-0400</span>
+    <span><a href="/">pagosacontainerhome.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
