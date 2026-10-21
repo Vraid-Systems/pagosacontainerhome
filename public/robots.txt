@@ -1,0 +1,7 @@
+# pagosacontainerhome.com welcomes search engines and AI assistants.
+# Content-Signal: https://contentsignals.org/
+User-Agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+Sitemap: https://pagosacontainerhome.com/sitemap.xml
