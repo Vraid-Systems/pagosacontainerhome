@@ -17,7 +17,24 @@ npx wrangler login
 npx wrangler deploy
 ```
 
-Preview locally with `npx wrangler dev`.
+## Running locally
+
+Use this to look at a branch or pull request before it goes live. You need Node 20 or newer. `wrangler dev` runs on your machine and doesn't need a Cloudflare login.
+
+```sh
+git clone https://github.com/Vraid-Systems/pagosacontainerhome.git
+cd pagosacontainerhome
+git switch <branch-name>   # or, with the GitHub CLI: gh pr checkout <PR number>
+npx wrangler dev
+```
+
+If you already have the repo, run `git fetch origin && git switch <branch-name>` instead of cloning.
+
+Then open http://localhost:8787. The pages to check are `/`, `/crews`, `/explore`, `/guide` and `/llms.txt`. Edits to files in `public/` show up on refresh, and changes to `worker.js` reload automatically.
+
+The static pages in `public/` (`crews.html`, `explore.html`, `guide.html`) also open straight from disk in a browser if you only need to look at one of them.
+
+Branch builds on Cloudflare don't get a public preview URL (`preview_urls` is off in `wrangler.jsonc`), so running locally is the way to see a change before merging. Merging to `main` deploys in about 30 seconds.
 
 ## Common edits
 
@@ -27,6 +44,8 @@ Preview locally with `npx wrangler dev`.
 
 - **House guide:** `public/guide.html`, served at `/guide` (check-in, house manual, check-out). It's plain HTML, not inside `worker.js`, so edit it directly. Its detail photos are in `public/photos/guide/`. It's marked `noindex` so search engines skip it, and the home page footer links to it. Never put door codes or Wi-Fi passwords on it: the site is public.
 - **Guidebook:** `public/explore.html`, served at `/explore` (riding, running, hot springs, food, groceries and EV charging, winter, dogs, off days). Plain HTML like the house guide, but indexable and listed in `public/sitemap.xml` and `/llms.txt`. Update the "Last updated" line at the bottom when you change it.
+
+- **Crew stays:** `public/crews.html`, served at `/crews`, for work crews (builders, utility and mitigation crews, agency travel). Plain HTML, indexable, in `sitemap.xml` and `/llms.txt`, linked from the home page under "Bring your gear" and from the footer. Keep it to 2 to 14 nights and keep staging or yard language off it.
 
 - **AI agents:** `/llms.txt` is a plain-text fact sheet for AI assistants, generated in `worker.js` (`LLMS_TXT`) so it always carries the current `BOOKING_URL`. The home page also has schema.org `VacationRental` JSON-LD. Both repeat facts from the page copy, so update them together. `public/robots.txt` allows all crawlers and sets Cloudflare Content Signals (`search=yes, ai-input=yes, ai-train=yes`); `public/sitemap.xml` lists the home page.
 
