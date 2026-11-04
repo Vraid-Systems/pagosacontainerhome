@@ -17,7 +17,24 @@ npx wrangler login
 npx wrangler deploy
 ```
 
-Preview locally with `npx wrangler dev`.
+## Running locally
+
+Use this to look at a branch or pull request before it goes live. You need Node 20 or newer. `wrangler dev` runs on your machine and doesn't need a Cloudflare login.
+
+```sh
+git clone https://github.com/Vraid-Systems/pagosacontainerhome.git
+cd pagosacontainerhome
+git switch <branch-name>   # or, with the GitHub CLI: gh pr checkout <PR number>
+npx wrangler dev
+```
+
+If you already have the repo, run `git fetch origin && git switch <branch-name>` instead of cloning.
+
+Then open http://localhost:8787. The pages to check are `/`, `/crews`, `/explore`, `/guide` and `/llms.txt`. Edits to files in `public/` show up on refresh, and changes to `worker.js` reload automatically.
+
+The static pages in `public/` (`crews.html`, `explore.html`, `guide.html`) also open straight from disk in a browser if you only need to look at one of them.
+
+Branch builds on Cloudflare don't get a public preview URL (`preview_urls` is off in `wrangler.jsonc`), so running locally is the way to see a change before merging. Merging to `main` deploys in about 30 seconds.
 
 ## Common edits
 
