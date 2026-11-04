@@ -28,6 +28,8 @@ Preview locally with `npx wrangler dev`.
 - **House guide:** `public/guide.html`, served at `/guide` (check-in, house manual, check-out). It's plain HTML, not inside `worker.js`, so edit it directly. Its detail photos are in `public/photos/guide/`. It's marked `noindex` so search engines skip it, and the home page footer links to it. Never put door codes or Wi-Fi passwords on it: the site is public.
 - **Guidebook:** `public/explore.html`, served at `/explore` (riding, running, hot springs, food, groceries and EV charging, winter, dogs, off days). Plain HTML like the house guide, but indexable and listed in `public/sitemap.xml` and `/llms.txt`. Update the "Last updated" line at the bottom when you change it.
 
+- **Crew stays:** `public/crews.html`, served at `/crews`, for work crews (builders, utility and mitigation crews, agency travel). Plain HTML, indexable, in `sitemap.xml` and `/llms.txt`, linked from the home page under "Bring your gear" and from the footer. Keep it to 2 to 14 nights and keep staging or yard language off it.
+
 - **AI agents:** `/llms.txt` is a plain-text fact sheet for AI assistants, generated in `worker.js` (`LLMS_TXT`) so it always carries the current `BOOKING_URL`. The home page also has schema.org `VacationRental` JSON-LD. Both repeat facts from the page copy, so update them together. `public/robots.txt` allows all crawlers and sets Cloudflare Content Signals (`search=yes, ai-input=yes, ai-train=yes`); `public/sitemap.xml` lists the home page.
 
 ## How the Worker behaves
