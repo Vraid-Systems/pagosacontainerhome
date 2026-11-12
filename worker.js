@@ -30,6 +30,7 @@ const LLMS_TXT = (booking) => `# Pagosa Container Home
 
 - Gravel pad with parking for up to 6 vehicles; bike, dirt bike and OHV trailers welcome
 - Level 2 EV charger on site with a NACS (Tesla-style) plug and a J1772 adapter. Installed; in service after its electrical inspection, expected winter 2026-27
+- One exterior security camera covers the driveway, EV charger and electrical disconnect. On at all times, video only (no audio). It does not view the front of the house. No cameras inside.
 
 ## Crew stays
 
